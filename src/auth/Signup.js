@@ -80,7 +80,7 @@ const Signup = () => {
   );
   return (
     <Layout>
-      <div className='col-md-6 offset-md-3'>
+      <div className='container my-4 col-md-6  offset-md-3  border border-light p-5'>
         <ToastContainer></ToastContainer>
         {/* check user if already signed in then redirect */}
         {isAuth() ? <Redirect to='/'></Redirect> : null}

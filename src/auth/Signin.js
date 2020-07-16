@@ -92,7 +92,7 @@ const Signin = ({ history }) => {
   );
   return (
     <Layout>
-      <div className='col-md-6 offset-md-3'>
+      <div className='container my-4 col-md-6  offset-md-3 border border-light p-5'>
         <ToastContainer></ToastContainer>
         {isAuth() ? <Redirect to='/'></Redirect> : null}
         <h1 className='p-5 text-center'>SignIn</h1>

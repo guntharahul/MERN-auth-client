@@ -1,8 +1,12 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { isAuth, signout } from '../auth/helpers';
 
 const Layout = ({ children, match, history }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
   const isActive = (path) => {
     if (match.path === path) {
       return {
@@ -16,7 +20,7 @@ const Layout = ({ children, match, history }) => {
   };
 
   const nav = () => (
-    <ul className='nav bg-primary  '>
+    <ul className='nav bg-primary'>
       <li className='nav-item'>
         <Link to='/' className=' nav-link' style={isActive('/')}>
           Home
@@ -63,7 +67,7 @@ const Layout = ({ children, match, history }) => {
 
       {isAuth() && (
         <Fragment>
-          <li className='nav-item'>
+          <li className='nav-item' style={{ float: 'right' }}>
             <span
               className='nav-link'
               style={{ cursor: 'pointer', color: '#fff' }}
