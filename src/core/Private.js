@@ -128,7 +128,7 @@ const Private = ({ history }) => {
     <Layout>
       <div className='col-md-6 offset-md-3'>
         <ToastContainer></ToastContainer>
-        <h1 className='p-5 text-center'>private: Update your profile</h1>
+        <h1 className='p-5 text-center'>Update your profile</h1>
         {updateForm()}
       </div>
     </Layout>

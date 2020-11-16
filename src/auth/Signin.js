@@ -10,8 +10,8 @@ import Facebook from './Facebook';
 
 const Signin = ({ history }) => {
   const [values, setValues] = useState({
-    email: 'rahulguntha@gmail.com',
-    password: 'Rahulg27',
+    email: '',
+    password: '',
     buttonText: 'Submit',
   });
   const { email, password, buttonText } = values;
@@ -41,7 +41,6 @@ const Signin = ({ history }) => {
       data: { email, password },
     })
       .then((response) => {
-        console.log('signin sucessful', response);
         // save the response token and user data to local storage and a cookie
         authenticate(response, () => {
           setValues({
@@ -68,6 +67,7 @@ const Signin = ({ history }) => {
       <div className='form-group'>
         <label className='text-muted'>Email</label>
         <input
+          placeholder='Enter your email'
           type='email'
           value={email}
           className='form-control'
@@ -77,6 +77,7 @@ const Signin = ({ history }) => {
       <div className='form-group'>
         <label className='text-muted'>Password</label>
         <input
+          placeholder='Enter password'
           type='password'
           value={password}
           className='form-control'

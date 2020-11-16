@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.min.css';
 
 const Forgot = ({ history }) => {
   const [values, setValues] = useState({
-    email: 'rahulguntha@gmail.com',
+    email: '',
     buttonText: 'Request Password reset Link',
   });
   const { email, buttonText } = values;
@@ -40,6 +40,7 @@ const Forgot = ({ history }) => {
       <div className='form-group'>
         <label className='text-muted'>Email</label>
         <input
+          placeholder='Enter your registered email address'
           type='email'
           value={email}
           className='form-control'

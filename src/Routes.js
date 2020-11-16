@@ -10,6 +10,7 @@ import PrivateRoute from './auth/PrivateRoute';
 import AdminRoute from './auth/AdminRoute';
 import Forgot from './auth/Forgot';
 import Reset from './auth/Reset';
+import Myhealth from './Myhealth';
 
 const Routes = () => {
   return (
@@ -20,6 +21,7 @@ const Routes = () => {
         <Route path='/signin' exact component={Signin}></Route>
         <Route path='/auth/activate/:token' exact component={Activate}></Route>
         <Route path='/auth/password/forgot' exact component={Forgot}></Route>
+        <Route path='/myhealth' exact component={Myhealth}></Route>
         <Route
           path='/auth/password/reset/:token'
           exact

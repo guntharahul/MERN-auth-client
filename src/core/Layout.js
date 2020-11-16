@@ -82,12 +82,26 @@ const Layout = ({ children, match, history }) => {
           </li>
         </Fragment>
       )}
+
+      {isAuth() && (
+        <Fragment>
+          <li className='nav-item'>
+            <Link
+              to='/myhealth'
+              className='nav-link'
+              style={isActive('/myhealth')}
+            >
+              My Health
+            </Link>
+          </li>
+        </Fragment>
+      )}
     </ul>
   );
   return (
     <Fragment>
       {nav()}
-      <div className='container'>{children}</div>
+      <div>{children}</div>
     </Fragment>
   );
 };
